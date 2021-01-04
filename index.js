@@ -1,0 +1,1 @@
+alert('How to use JS');
