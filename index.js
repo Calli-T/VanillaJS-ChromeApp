@@ -1,4 +1,30 @@
 const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+    const currentClass = title.className;
+    //if(currentClass !== CLICKED_CLASS){
+    if(title.classList.contains(CLICKED_CLASS)) {
+        //title.className = CLICKED_CLASS;
+        title.classList.add(CLICKED_CLASS);
+    } else{
+        //title.className = "";
+        title.classList.remove(CLICKED_CLASS);
+    }
+}
+//classList에 add나 remove로 class추가 제거 가능, 포함 확인은 contains로
+
+
+function init(){
+    title.addEventListener("click", handleClick);
+}
+init();
+
+//이벤트 리스트 명세는 다음사이트에 있다
+//  https://developer.mozilla.org/ko/docs/Web/Events
+
+/*const title = document.querySelector("#title");
 let isRed = false;
 
 function clickEvent(){
@@ -18,7 +44,7 @@ function resizeEvent(){
 window.addEventListener("click", clickEvent);
 window.addEventListener("resize", resizeEvent);
 //웹사이트의 발생하는 사건들은 input, click등등 이벤트라고 한다
-//EventLister를 통해 이벤트의 동작시점에 사용될 함수를 지정할 수 있다.
+//EventLister를 통해 이벤트의 동작시점에 사용될 함수를 지정할 수 있다.*/
 
 //2.2~2-3
 /*let title = document.getElementById("title");
