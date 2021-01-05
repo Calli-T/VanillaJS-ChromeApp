@@ -1,3 +1,19 @@
+let title = document.getElementById("title");
+title.innerHTML = "Hi! From JS";
+title.style.color="wheat";
+document.title = `Testing js`;
+//document object는 HTML문서를 가져와서 객체로 만들어준다. (html과 xml은 브라우저 안에서 dom트리로 표현된다)
+//document의 getElementById함수는 HTML의 id를 보고 각 태그를 지정해서 가져온다
+//.innerHTML함수는 HTML안에 글을넣어준다
+//style도 객체이며 수정가능하다
+//각 요소는 많은 객체들을 포함한다
+//document객체의 get~함수로 각 요소들을 특정할 할 수 있다
+
+title = document.querySelector("#title");
+title.style.fontSize = ("100px");
+//querySelector는 css와 비슷하게 id나 class, 요소명을 가져오며 첫 번째것을 가져온다
+//html과 css는 JS로 수정가능함
+
 /*const calculator = {
     plus: function(a, b) {
         return a+b;
