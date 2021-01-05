@@ -1,4 +1,27 @@
-let title = document.getElementById("title");
+const title = document.querySelector("#title");
+let isRed = false;
+
+function clickEvent(){
+    if(isRed){
+        title.style.color = "blue";
+        isRed = false;
+    } else{
+        title.style.color = "red";
+        isRed = true;
+    }
+}
+
+function resizeEvent(){
+    title.style.color = "wheat";
+}
+
+window.addEventListener("click", clickEvent);
+window.addEventListener("resize", resizeEvent);
+//웹사이트의 발생하는 사건들은 input, click등등 이벤트라고 한다
+//EventLister를 통해 이벤트의 동작시점에 사용될 함수를 지정할 수 있다.
+
+//2.2~2-3
+/*let title = document.getElementById("title");
 title.innerHTML = "Hi! From JS";
 title.style.color="wheat";
 document.title = `Testing js`;
@@ -12,7 +35,7 @@ document.title = `Testing js`;
 title = document.querySelector("#title");
 title.style.fontSize = ("100px");
 //querySelector는 css와 비슷하게 id나 class, 요소명을 가져오며 첫 번째것을 가져온다
-//html과 css는 JS로 수정가능함
+//html과 css는 JS로 수정가능함*/
 
 /*const calculator = {
     plus: function(a, b) {
