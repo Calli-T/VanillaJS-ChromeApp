@@ -1,4 +1,47 @@
-const title = document.querySelector("#title");
+const clockContainer = document.querySelector(".js-clock"),
+        clockTitle = document.querySelector("h1");
+
+function getTime() {
+    const date = new Date();
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
+    const seconds = date.getSeconds();
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+}
+
+function init(){
+    getTime();
+    setInterval(getTime, 1000);//이함수는 함수를 받고 시간간격을 ms로 받아 시간간격마다 실행시킨다
+}
+
+init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const title = document.querySelector("#title");
 
 const CLICKED_CLASS = "clicked";
 
@@ -19,7 +62,7 @@ function handleClick() {
 function init(){
     title.addEventListener("click", handleClick);
 }
-init();
+init();*/
 
 //이벤트 리스트 명세는 다음사이트에 있다
 //  https://developer.mozilla.org/ko/docs/Web/Events
