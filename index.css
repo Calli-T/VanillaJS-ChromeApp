@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
 /*body {
   background-color: mintcream;
   font-family: "Open sans", sans-serif;
