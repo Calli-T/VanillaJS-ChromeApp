@@ -13,7 +13,7 @@ function getRandom(){
 
 function paintImage(imgNumber) {
     const image = new Image();
-    image.src = `/img/landscape${imgNumber + 1}.jpg`;
+    image.src = `img/landscape${imgNumber + 1}.jpg`;
     body.appendChild(image);
     image.classList.add('bgImg');
     image.addEventListener("loadend", handleImgLoad)
